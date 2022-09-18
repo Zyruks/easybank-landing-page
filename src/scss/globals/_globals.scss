@@ -1,0 +1,40 @@
+@use "../abstract" as *;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: var(--ff-body);
+}
+
+body {
+  color: var(--clr-neutral-600);
+  font-weight: var(--fw-400);
+  font-size: var(--fluid-fs-400);
+
+  line-height: var(--lh-700);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-700);
+  font-family: var(--ff-headings);
+  line-height: var(--lh-500);
+}
+
+h1 {
+  font-size: var(--fluid-fs-900);
+}
+
+h2,
+h3 {
+  font-size: var(--fluid-fs-800);
+}
+
+h4 {
+  font-size: var(--fluid-fs-400);
+}

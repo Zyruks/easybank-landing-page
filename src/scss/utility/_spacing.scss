@@ -1,0 +1,51 @@
+@use "../abstract/" as *;
+@use "sass:string";
+
+@each $box in $boxes {
+  @each $position in $block-positions {
+    @each $space, $value in $spaces {
+      @if ($position == "") {
+        .#{$box}-#{$space} {
+          #{$box}: #{$value};
+        }
+      } @else {
+        .#{$box}-#{$position}-#{$space} {
+          #{$box}-#{$position}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+@each $gap, $value in $spaces {
+  .gap-#{$gap} {
+    gap: #{$value};
+  }
+
+  .row-gap-#{$gap} {
+    row-gap: #{$value};
+  }
+  .column-gap-#{$gap} {
+    column-gap: #{$value};
+  }
+}
+
+@each $radius, $value in $corner-radius {
+  .border-radius-#{$radius} {
+    border-radius: #{$value};
+  }
+}
+
+@each $item in $aligns {
+  @each $position in $content-positions {
+    .#{$item}-#{$position} {
+      #{$item}: #{$position};
+    }
+  }
+}
+
+@each $space, $value in $spaces {
+  .max-width-#{$space} {
+    max-inline-size: #{$value};
+  }
+}

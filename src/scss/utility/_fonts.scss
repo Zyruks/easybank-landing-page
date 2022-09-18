@@ -1,0 +1,35 @@
+@use "../abstract/" as *;
+@use "sass:string";
+
+@each $size, $types in $font-sizes {
+  @each $type, $value in $types {
+    @if ($size == "fluid") {
+      .fluid-fs-#{$type} {
+        font-size: $value;
+      }
+    }
+    @if ($size == "classic") {
+      .fs-#{$type} {
+        font-size: $value;
+      }
+    }
+  }
+}
+
+@each $fw, $value in $font-weights {
+  .fw-#{$fw} {
+    font-weight: $value;
+  }
+}
+
+@each $align in $text-align {
+  .text-align-#{$align} {
+    text-align: #{$align};
+  }
+}
+
+@each $height, $value in $line-heights {
+  .lh-#{$height} {
+    line-height: $value;
+  }
+}

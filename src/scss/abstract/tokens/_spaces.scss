@@ -1,0 +1,51 @@
+@use "../functions" as *;
+/* spaces */
+$spaces: (
+  "none": 0,
+  "100": rem(4),
+  "200": rem(8),
+  "300": rem(12),
+  "400": rem(16),
+  "500": rem(24),
+  "600": rem(32),
+  "700": rem(48),
+  "750": rem(60),
+  "800": rem(72),
+  "900": rem(96),
+  "auto": auto,
+);
+
+$block-positions: (
+  "",
+  "block",
+  "block-start",
+  "block-end",
+  "inline",
+  "inline-start",
+  "inline-end"
+);
+
+$boxes: ("margin", "padding");
+
+$aligns: (
+  "justify-content",
+  "justify-items",
+  "justify-self",
+  "align-content",
+  "align-items",
+  "align-self",
+  "place-content",
+  "place-items",
+  "place-self"
+);
+
+$content-positions: (
+  "flex-start",
+  "center",
+  "flex-end",
+  "space-around",
+  "space-between",
+  "space-evenly"
+);
+
+/* spaces end */
