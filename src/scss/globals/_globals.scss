@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  color: var(--clr-neutral-600);
+  color: var(--clr-neutral-900);
   font-weight: var(--fw-400);
   font-size: var(--fluid-fs-400);
 
@@ -37,4 +37,18 @@ h3 {
 
 h4 {
   font-size: var(--fluid-fs-400);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }

@@ -14,3 +14,15 @@ $drop-shadows: (
   "400": 0px 2px 10px rgba(0, 0, 0, 0.2),
 );
 /* block end*/
+
+$displays: (
+  "none": none,
+  "inline": inline,
+  "block": block,
+  "flex": flex,
+  "grid": grid,
+  "inline-block": inline-block,
+  "inline-flex": inline-flex,
+  "inline-grid": inline-grid,
+  "contents": contents,
+);

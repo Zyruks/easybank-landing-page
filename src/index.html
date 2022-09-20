@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change Title here</title>
+    <title>Easybank - Frontend Mentor</title>
     <meta name="title" content="Change Title here" />
     <meta name="description" content="Change description" />
-    <meta name="keywords" content="frontend mentor" />
+    <meta
+      name="keywords"
+      content="Frontend Mentor Challenge Easybank landing Page"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
 
@@ -40,7 +43,12 @@
     <!-- favicon responsive end-->
 
     <!-- google stuff -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- google stuff end-->
 
     <!-- styles -->
@@ -49,6 +57,29 @@
   </head>
 
   <body>
+    <header class="bg-neutral-100 | js-header dropdown-off">
+      <div class="backdrop js-backdrop"></div>
+      <div
+        class="header-container | wrapper | dp-flex align-items-center justify-content-space-between padding-block-500 position-relative"
+      >
+        <img src="./assets/svg/logo.svg" alt="Easybank Logotype" />
+        <button class="burger-menu js-burger-menu" data-state="invisible">
+          <span class="line line-1 js-line"></span>
+          <span class="line line-2 js-line"></span>
+          <span class="line line-3 js-line"></span>
+        </button>
+        <nav class="primary-nav js-primary-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <button class="cta">Request Invite</button>
+      </div>
+    </header>
     <script src="./scripts/script.js"></script>
   </body>
 </html>

@@ -49,3 +49,19 @@
     max-inline-size: #{$value};
   }
 }
+
+@each $display, $value in $displays {
+  .dp-#{$display} {
+    display: #{$value};
+  }
+}
+
+@each $percentage, $value in $percentages {
+  .width-#{$percentage} {
+    inline-size: #{$value};
+  }
+}
+
+.position-relative {
+  position: relative;
+}

@@ -1,7 +1,7 @@
 @use "../abstract" as *;
 @use "sass:map";
 
-:where(.btn, button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]),
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]),
 :where(input[type="file"])::file-selector-button {
   --accent: #{map.get($buttons, "accent")};
   --text: #{map.get($buttons, "text")};
@@ -20,8 +20,7 @@
   --shadow-2: #{map.get($buttons, "shadow-2")}, #{map.get($buttons, "shadow-3")};
   --shadow-depth: #{map.get($buttons, "shadow-depth")};
   --transition-motion-reduce: ;
-  --transition-motion-ok: box-shadow var(--duration-250) var(--ease-in-out),
-    outline-offset var(--duration-250) var(--ease-in-out);
+  --transition-motion-ok: opacity var(--duration-300) var(--ease-in-out);
   --transition: var(--transition-motion-reduce);
 
   border-radius: #{map.get($buttons, "border-radius")};
@@ -38,7 +37,7 @@
   }
 }
 
-:where(.btn, button, input[type="button"], input[type="submit"], input[type="reset"]),
+:where(button, input[type="button"], input[type="submit"], input[type="reset"]),
 :where(input[type="file"])::file-selector-button {
   display: inline-flex;
   gap: 1ch;
@@ -77,7 +76,7 @@
 }
 
 /* icons */
-:where(.btn, button, input[type="button"], input[type="submit"], input[type="reset"])
+:where(button, input[type="button"], input[type="submit"], input[type="reset"])
   > :where(svg, [data-icon]) {
   flex-shrink: 0;
 
@@ -92,18 +91,18 @@
 }
 
 /* focus */
-:where(.btn, button, input):where(:not(:active)):focus-visible {
+:where(button, input):where(:not(:active)):focus-visible {
   outline-offset: rem(5);
 }
 
 /* pressing 
  modify if you want a different hover effect */
-:where(.btn, button, input[type="button"], input[type="submit"], input[type="reset"]):where(:not(:active):hover) {
-  --highlight-size: #{rem(8)};
+:where(button, input[type="button"], input[type="submit"], input[type="reset"]):where(:not(:active):hover) {
+  opacity: 75%;
 }
 
 /* disabled */
-:where(.btn, button, input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
+:where(button, input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
   --bg: #{map.get($disable-btn, "bg")};
   --text: #{map.get($disable-btn, "text")};
 
@@ -113,7 +112,7 @@
 }
 
 /* adaptive  text */
-:where(.btn, [type="submit"], form button:not([type], [disabled])) {
+:where([type="submit"], form button:not([type], [disabled])) {
   --text: var(--accent);
 }
 
@@ -147,7 +146,7 @@
 
 /* Custom Button */
 
-:where(.btn[data-state="emergency"], button[data-state="emergency"]) {
+:where(button[data-state="emergency"]) {
   --bg: #{map.get($custom-btn, "bg")};
   --border-color: #{map.get($custom-btn, "border-color")};
   --text: #{map.get($custom-btn, "text")};
@@ -155,4 +154,14 @@
   --highlight: #{map.get($custom-btn, "highlight")};
   --shadow-1: #{map.get($custom-btn, "shadow-1")};
   --shadow-2: #{map.get($custom-btn, "shadow-2")};
+}
+
+:where([data-state="invisible"]) {
+  --bg: #{map.get($invisible-btn, "bg")};
+  --border-color: #{map.get($invisible-btn, "border-color")};
+  --text: #{map.get($invisible-btn, "text")};
+  --text-shadow: #{map.get($invisible-btn, "text-shadow")};
+  --highlight: #{map.get($invisible-btn, "highlight")};
+  --shadow-1: #{map.get($invisible-btn, "shadow-1")};
+  --shadow-2: #{map.get($invisible-btn, "shadow-2")};
 }

@@ -1,1 +1,28 @@
 @use "../abstract" as *;
+
+.header-container {
+  font-size: var(--fluid-fs-600);
+
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-300);
+  }
+}
+
+.primary-nav {
+  font-weight: 400;
+
+  font-size: var(--fluid-fs-500);
+
+  @include breakpoint(medium) {
+    color: var(--clr-neutral-400);
+    font-size: var(--fluid-fs-300);
+
+    a {
+      transition: all ease-in-out 300ms;
+    }
+
+    & a:hover {
+      color: var(--clr-neutral-800);
+    }
+  }
+}
