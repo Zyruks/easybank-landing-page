@@ -27,7 +27,12 @@ h3 {
 }
 
 h1 {
+  font-weight: 300;
   font-size: var(--fluid-fs-900);
+
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-700);
+  }
 }
 
 h2,
@@ -44,6 +49,16 @@ ul {
   padding: 0;
 
   list-style: none;
+}
+
+p {
+  color: var(--clr-neutral-400);
+  font-size: var(--fluid-fs-400);
+
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-300);
+    max-inline-size: 40ch;
+  }
 }
 
 a,

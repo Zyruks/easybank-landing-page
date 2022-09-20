@@ -72,7 +72,7 @@
     inset-inline: 0;
     inset-block-end: rem(-12);
 
-    @include bre akpoint(medium) {
+    @include breakpoint(medium) {
       inset-block-end: rem(-30);
     }
   }

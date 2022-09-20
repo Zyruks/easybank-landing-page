@@ -5,12 +5,46 @@
  * Sets a max width, adds a consistent gutter and horizontally
  * centers the contents
  */
-.wrapper {
-  position: relative;
 
+.wrapper {
   inline-size: 95vw;
 
   max-inline-size: rem(1300);
   margin-inline: auto;
   padding-inline: 1.5rem;
+
+  // position: relative;
+}
+
+.stack > * + * {
+  margin-block-start: 1.25rem;
+}
+
+.total-alignment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.even-columns {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  @include breakpoint(medium) {
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+  }
+}
+
+.first-column {
+  grid-column: 1/2;
 }

@@ -1,0 +1,23 @@
+@use "../abstract" as *;
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  @include breakpoint(medium) {
+    text-align: start;
+  }
+}
+
+.hero img {
+  transform: translateY(rem(-90));
+  @include breakpoint(medium) {
+    transform: translateY(rem(-50));
+  }
+  @include breakpoint(large) {
+    transform: translateY(rem(-80));
+  }
+}
