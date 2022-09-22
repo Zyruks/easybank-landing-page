@@ -1,13 +1,13 @@
 @use "../abstract" as *;
 
-.backdrop-on {
+.backdrop {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 
   background: linear-gradient(
     180deg,
-    hsla(0deg, 0%, 0%, 50%) 0%,
-    hsla(0deg, 0%, 0%, 20%) 100%
+    hsla(233deg, 26%, 24%, 80%) 0%,
+    hsla(233deg, 26%, 24%, 0%) 100%
   );
 
   transition: opacity 300ms ease-in-out;
@@ -19,6 +19,7 @@
 
 .primary-nav {
   position: absolute;
+  z-index: 1;
 
   display: none;
 
@@ -33,9 +34,9 @@
     position: static;
 
     display: block;
-    padding-block: rem(0);
 
     background-color: none;
+    padding-block: rem(0);
   }
 
   ul {
@@ -73,7 +74,7 @@
     inset-block-end: rem(-12);
 
     @include breakpoint(medium) {
-      inset-block-end: rem(-30);
+      inset-block-end: rem(-37);
     }
   }
 

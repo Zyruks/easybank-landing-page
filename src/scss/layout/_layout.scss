@@ -64,6 +64,25 @@
   grid-column: 1/2;
 }
 
+/* header */
+
+.header-container {
+  z-index: 3;
+}
+
+/* features */
+.features {
+  position: relative;
+  @include breakpoint(medium) {
+    margin-block-start: rem(-170);
+
+    z-index: 1;
+  }
+  @include breakpoint(large) {
+    margin-block-start: rem(-260);
+  }
+}
+
 /* footer */
 
 .footer .wrapper {

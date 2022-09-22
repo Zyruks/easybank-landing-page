@@ -12,9 +12,25 @@
   }
 }
 
+.hero__text-child {
+  @include breakpoint(medium) {
+    justify-self: flex-start;
+
+    transform: translateY(rem(-50));
+  }
+
+  @include breakpoint(large) {
+    transform: translateY(rem(-100));
+  }
+}
+
 .hero img {
+  position: relative;
+
   transform: translateY(rem(-90));
   @include breakpoint(medium) {
+    z-index: 3;
+
     transform: translateY(rem(-50));
   }
   @include breakpoint(large) {

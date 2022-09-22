@@ -27,7 +27,7 @@
   font-size: var(--fluid-fs-400);
 
   @include breakpoint(medium) {
-    font-size: var(--fluid-fs-300);
+    font-size: var(--fluid-fs-200);
   }
 
   & a:hover {
