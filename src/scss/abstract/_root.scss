@@ -8,6 +8,12 @@
     }
   }
 
+  --gradient-400: linear-gradient(
+    90deg,
+    var(--clr-primary-400) 0%,
+    var(--clr-primary-500) 100%
+  );
+
   /* font family */
   @each $font-family, $value in $font-families {
     --ff-#{$font-family}: #{$value}, serif;
