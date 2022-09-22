@@ -83,6 +83,10 @@
   }
 }
 
+.header-container {
+  z-index: 3;
+}
+
 .header-container .cta {
   display: none;
   @include breakpoint(medium) {
