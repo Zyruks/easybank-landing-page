@@ -1,11 +1,10 @@
 const burgerBtn = document.querySelector(".js-burger-menu");
 const lines = document.querySelectorAll(".js-line");
-
-const backDrop = document.querySelector(".js-backdrop");
 const primaryNav = document.querySelector(".js-primary-nav");
 
 burgerBtn.addEventListener("click", () => {
   burgerMenuAnimation();
+  backDrop();
 });
 
 /**
@@ -27,9 +26,6 @@ function burgerMenuAnimation() {
 
     /* nav menu animation */
 
-    backDrop.classList.add("anima-opacity-on");
-    backDrop.classList.add("backdrop-on");
-
     primaryNav.classList.add("anima-pop-up");
     primaryNav.classList.remove("anima-pop-out");
     primaryNav.classList.add("dp-block");
@@ -46,8 +42,6 @@ function burgerMenuAnimation() {
     lines[2].classList.add("anima-rotate-negative-45deg-back");
 
     /* nav menu Animation */
-    backDrop.classList.remove("anima-opacity-on");
-    backDrop.classList.add("anima-opacity-off");
 
     primaryNav.classList.remove("anima-pop-up");
     primaryNav.classList.add("anima-pop-out");
@@ -56,10 +50,26 @@ function burgerMenuAnimation() {
     burgerBtn.classList.remove("open");
 
     setTimeout(() => {
-      backDrop.classList.remove("backdrop-on");
-      backDrop.classList.remove("anima-opacity-off");
-
       primaryNav.classList.remove("dp-block");
+      primaryNav.classList.remove("anima-pop-out");
+    }, 350);
+  }
+}
+
+const header = document.querySelector(".js-header");
+
+function backDrop() {
+  const div = document.createElement("div");
+  div.className = "backdrop js-backdrop anima-opacity-on";
+  if (burgerBtn.classList.contains("open") !== false) {
+    header.appendChild(div);
+  } else {
+    const backDropSelector = document.querySelector(".js-backdrop");
+    backDropSelector.classList.remove("anima-opacity-on");
+    backDropSelector.classList.add("anima-opacity-off");
+
+    setTimeout(() => {
+      header.removeChild(backDropSelector);
     }, 350);
   }
 }
