@@ -19,13 +19,13 @@
 
     @include breakpoint(medium) {
       background-image: url("../assets/svg/bg-intro-desktop.svg");
-      inset-block-start: -25%;
+      inset-block-start: -20%;
       inset-inline-end: -43%;
     }
     @include breakpoint(large) {
-      inset-block-start: -25%;
+      inset-block-start: -20%;
 
-      background-size: 70%;
+      background-size: 100%;
     }
   }
 }
