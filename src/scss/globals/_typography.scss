@@ -26,3 +26,12 @@
     }
   }
 }
+
+.author {
+  color: var(--clr-neutral-400);
+  font-size: var(--fluid-fs-300);
+
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-200);
+  }
+}

@@ -20,6 +20,10 @@
   margin-block-start: var(--space, 1.25rem);
 }
 
+.blog .stack {
+  --space: 0.5rem;
+}
+
 .total-alignment {
   display: flex;
   flex-direction: column;
@@ -37,7 +41,7 @@
 
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(100% / 1, max(rem(250), 100% / 5)), 1fr)
+    minmax(min(100% / 1, max(rem(200), 100% / 5)), 1fr)
   );
   align-items: center;
   justify-items: center;
