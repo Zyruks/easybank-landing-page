@@ -20,10 +20,8 @@ function imageCompiler() {
       responsive({
         formats: [
           {
+            // Original image
             width: (metadata) => Math.trunc(metadata.width * 1),
-            //  rename: { suffix: "-og" },
-            format: "jpeg",
-            jpegOptions: { quality: 90, progressive: true },
           },
 
           {
