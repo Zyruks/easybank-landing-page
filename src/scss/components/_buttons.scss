@@ -52,10 +52,10 @@
 
   font-weight: #{map.get($buttons, "font-weight")};
 
-  font-size: #{map.get($buttons, "mobile-font-size")};
+  font-size: #{map.get($buttons, "mobile-font-size") !important};
 
   @include breakpoint(medium) {
-    font-size: #{map.get($buttons, "font-size")};
+    font-size: #{map.get($buttons, "font-size") !important};
   }
   text-align: center;
   text-shadow: var(--text-shadow);

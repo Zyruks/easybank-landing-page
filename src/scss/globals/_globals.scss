@@ -48,7 +48,7 @@ h3 {
   font-size: var(--fluid-fs-600);
 
   @include breakpoint(medium) {
-    font-size: var(--fluid-fs-400);
+    font-size: var(--fluid-fs-300);
   }
 }
 
