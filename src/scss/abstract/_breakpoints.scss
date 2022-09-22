@@ -1,4 +1,5 @@
 @use "tokens" as *;
+/* Creating a mixin that will be used to create media queries. */
 @mixin breakpoint($size) {
   @media (min-width: map-get($breakpoints, $size)) {
     @content;

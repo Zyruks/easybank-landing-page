@@ -1,5 +1,6 @@
 @use "../abstract/" as *;
 
+/* animations */
 @keyframes rotate-45deg {
   0% {
     transform: rotate(0);
@@ -113,3 +114,5 @@
   animation: anima-pop-out 300ms ease-in-out forwards,
     anima-opacity-off 250ms ease-in-out forwards;
 }
+
+/* animations end */

@@ -1,5 +1,6 @@
 @use "../abstract/" as *;
 
+/* Creating a class for each color and shade. */
 @each $color, $shades in $colors {
   @each $shade, $value in $shades {
     .text-#{$color}-#{$shade} {
