@@ -156,6 +156,12 @@
   --shadow-2: #{map.get($custom-btn, "shadow-2")};
 }
 
+:where([data-place="footer"]) {
+  --padding-inline: #{map.get($footer-btn, "padding-inline")};
+  --padding-block: #{map.get($footer-btn, "padding-block")};
+  font-size: #{map.get($footer-btn, "font-size") !important};
+}
+
 :where([data-state="invisible"]) {
   --bg: #{map.get($invisible-btn, "bg")};
   --border-color: #{map.get($invisible-btn, "border-color")};

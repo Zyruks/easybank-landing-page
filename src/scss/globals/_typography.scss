@@ -17,13 +17,21 @@
     color: var(--clr-neutral-400);
     font-size: var(--fluid-fs-300);
 
-    a {
-      transition: all ease-in-out 300ms;
-    }
-
     & a:hover {
       color: var(--clr-neutral-800);
     }
+  }
+}
+
+.secondary-nav {
+  font-size: var(--fluid-fs-400);
+
+  @include breakpoint(medium) {
+    font-size: var(--fluid-fs-300);
+  }
+
+  & a:hover {
+    color: var(--clr-primary-500);
   }
 }
 

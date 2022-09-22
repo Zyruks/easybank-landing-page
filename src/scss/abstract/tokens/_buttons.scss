@@ -23,7 +23,7 @@ $buttons: (
   "border-style": solid,
   "border-width": rem(2),
   "highlight-size": rem(0),
-  "highlight": hsla(273, 53%, 37%, 25%),
+  "highlight": none,
   "text-shadow": 0 rem(1) 0 var(--clr-neutral-200),
   "icon-size": 2ch,
   "icon-color": var(--accent),
@@ -53,6 +53,12 @@ $custom-btn: (
   "highlight": rgba(250, 92, 92, 0.2),
   "shadow-1": rgb(245, 77, 77),
   "shadow-2": 0 rem(3) rem(5) rem(-2) rgb(245, 77, 77),
+);
+
+$footer-btn: (
+  "padding-inline": 2ch,
+  "padding-block": 0.7ch,
+  "font-size": var(--fluid-fs-300),
 );
 
 $invisible-btn: (

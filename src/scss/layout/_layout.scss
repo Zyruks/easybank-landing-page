@@ -63,3 +63,56 @@
 .first-column {
   grid-column: 1/2;
 }
+
+/* footer */
+
+.footer .wrapper {
+  row-gap: rem(36);
+
+  justify-items: center;
+
+  @include breakpoint(medium) {
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: minmax(min(100% / 1, max(rem(100), 100% / 4)), 0.5fr) 0.5fr 1fr;
+
+    column-gap: rem(40);
+  }
+}
+
+.footer-logo {
+  @include breakpoint(medium) {
+    grid-column: 1/2;
+    justify-self: flex-start;
+  }
+}
+
+.social {
+  @include breakpoint(medium) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: flex-start;
+  }
+}
+
+.secondary-nav {
+  text-align: center;
+
+  @include breakpoint(medium) {
+    grid-row: 1/3;
+    grid-template-columns: 1fr 1fr;
+    justify-self: flex-start;
+
+    white-space: nowrap;
+
+    text-align: start;
+  }
+}
+
+.footer-btn,
+.copyright {
+  @include breakpoint(medium) {
+    justify-self: flex-end;
+
+    white-space: nowrap;
+  }
+}
